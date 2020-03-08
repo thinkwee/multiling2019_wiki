@@ -1,0 +1,23 @@
+This directory contains the training data for 
+MultiLing 2017 short summary generation for Wikipedia feature
+articles.  
+
+The directory "full" contains the original Wikipedia 
+feature articles in an XML format. There are 42 subdirectories
+one for each language and for each language there are Wikipedia
+feature articles whose XML tags give the three major parts:
+
+	1. <title>
+	2. <summary>
+	3. <body>
+
+The <body> part contains one or more <section> sub parts, each of which may
+have a <header> tag.  
+
+The directory "clipped" contains the same Wikipedia feature articles;
+however, the <text> portions <title> and <header> in the <body> have
+been replaced with an integer, giving the length in characters of the missing text
+portion of the <title> and <header>.  The text portions of each <p>
+(paragraph) of the summary are also replaced with the length of the extracted
+text in bytes.  The task for the MultiLing19 Wikipedia is to reconstruct the
+missing text portion of the <title>.
